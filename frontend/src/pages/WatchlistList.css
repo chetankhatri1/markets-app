@@ -1,0 +1,374 @@
+.watchlist-list-page {
+  padding: 1.5rem;
+}
+
+.watchlist-list-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.watchlist-list-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.watchlist-list-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.watchlist-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.watchlist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.watchlist-card-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.watchlist-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.watchlist-card-action {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.watchlist-card-action:hover {
+  color: var(--primary-color);
+  background-color: var(--hover-bg);
+}
+
+.watchlist-card-body {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-card-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.watchlist-card-stat {
+  text-align: center;
+  flex: 1;
+}
+
+.watchlist-card-stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.watchlist-card-stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.watchlist-card-stocks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.watchlist-card-stock {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.watchlist-card-stock:last-child {
+  border-bottom: none;
+}
+
+.watchlist-card-stock-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-card-stock-symbol {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.watchlist-card-stock-company {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.watchlist-card-stock-price {
+  text-align: right;
+}
+
+.watchlist-card-stock-value {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.watchlist-card-stock-change {
+  font-size: 0.875rem;
+}
+
+.watchlist-card-stock-change.positive {
+  color: var(--success-color);
+}
+
+.watchlist-card-stock-change.negative {
+  color: var(--danger-color);
+}
+
+.watchlist-card-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-card-date {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+.watchlist-card-view {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.watchlist-card-view:hover {
+  text-decoration: underline;
+}
+
+.create-watchlist-card {
+  background-color: var(--card-bg);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 100%;
+}
+
+.create-watchlist-card:hover {
+  border-color: var(--primary-color);
+  background-color: var(--hover-bg);
+}
+
+.create-watchlist-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.create-watchlist-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.create-watchlist-subtext {
+  color: var(--text-secondary);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow-hover);
+  width: 100%;
+  max-width: 500px;
+  padding: 1.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--danger-color);
+}
+
+.modal-body {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+
+.empty-state-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.empty-state-text {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .watchlist-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .watchlist-list-actions {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .watchlist-list-actions button {
+    flex: 1;
+  }
+  
+  .watchlist-grid {
+    grid-template-columns: 1fr;
+  }
+}

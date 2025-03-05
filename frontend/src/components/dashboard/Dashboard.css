@@ -1,0 +1,281 @@
+.dashboard {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.welcome-message {
+  color: var(--dark-gray);
+  font-size: 1.1rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.dashboard-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.section-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.view-all {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Market Overview Section */
+.market-overview-section {
+  grid-column: span 12;
+}
+
+.market-indices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.market-index-card {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.market-index-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.index-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.index-change {
+  font-weight: 500;
+}
+
+.index-change.positive {
+  color: var(--success-color, #28a745);
+}
+
+.index-change.negative {
+  color: var(--danger-color, #dc3545);
+}
+
+/* Watchlist Section */
+.watchlist-section {
+  grid-column: span 12;
+}
+
+/* Top Performers Section */
+.top-performers-section {
+  grid-column: span 12;
+}
+
+.top-performers-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.top-performers-stocks,
+.top-performers-etfs {
+  background-color: var(--background-color);
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.top-performers-container h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+/* News Section */
+.news-section {
+  grid-column: span 12;
+}
+
+/* Quick Actions Section */
+.quick-actions-section {
+  grid-column: span 12;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.quick-action-card {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.quick-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action-icon {
+  background-color: var(--primary-color);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.quick-action-icon i {
+  font-size: 1.5rem;
+}
+
+.quick-action-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.quick-action-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* Loading State */
+.dashboard-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--secondary-color);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dashboard-loading p {
+  color: var(--dark-gray);
+}
+
+/* Error State */
+.dashboard-error {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.dashboard-error h3 {
+  color: var(--danger-color);
+  margin-bottom: 15px;
+}
+
+.dashboard-error p {
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+}
+
+/* Responsive Layout */
+@media (min-width: 992px) {
+  .market-overview-section {
+    grid-column: span 8;
+  }
+  
+  .watchlist-section {
+    grid-column: span 4;
+  }
+  
+  .top-performers-section {
+    grid-column: span 8;
+  }
+  
+  .news-section {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-performers-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .top-performers-stocks,
+  .top-performers-etfs {
+    margin-bottom: 15px;
+  }
+  
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}
